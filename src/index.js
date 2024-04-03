@@ -15,3 +15,10 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+//strict mode will make the app to loads twice in development mode. 
+//It happens to check the inconsistency in the app.
+// it does not happens in production evn
+
+
+//rafce
