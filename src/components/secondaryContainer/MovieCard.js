@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { IMAGE_CDN } from '../../utils/constant';
 
-const movieCard = () => {
+const movieCard = ({ posterPath }) => {
   return (
-    <div>movieCard</div>
+    <div className='w-44 pr-2'>
+      <img
+        alt='Movie Card'
+        src={IMAGE_CDN + posterPath} />
+    </div>
   )
 }
 

@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Header from './Header';
 import useNowPlayingMovie from '../hooks/useNowPlayingMovie'
 import MainContainer from './BrowseComponents/MainContainer';
 import SecondaryComponent from './BrowseComponents/SecondaryComponent';
 
 const Browse = () => {
-  useNowPlayingMovie();
+  useNowPlayingMovie()
   return (
     <div>
       <Header />
