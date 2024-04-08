@@ -12,17 +12,17 @@ const SecondaryComponent = () => {
           title={"Now Playing"}
           movies={movies.nowPlayingMovies}
         />
-        <MovieList
+        {/* <MovieList
           title={"Trending"}
           movies={movies.nowPlayingMovies}
-        />
+        /> */}
         <MovieList
           title={"Popular"}
-          movies={movies.nowPlayingMovies}
+          movies={movies.popularMovies}
         />
         <MovieList
           title={"Upcoming Movies"}
-          movies={movies.nowPlayingMovies}
+          movies={movies.upcomingMovies}
         />
       </div>
     )
