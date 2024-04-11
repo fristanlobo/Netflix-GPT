@@ -13,6 +13,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector(store => store.user);
+  const showGptValue = useSelector(store => store.gpt.showGptSearch)
   const handleSignOut = () => {
     signOut(auth).then(() => {
       navigate("/")
@@ -62,16 +63,21 @@ const Header = () => {
       {
         user && (
           <div className='flex p-2'>
-            <select className='p-2 m-2 bg-gray-900 text-white'
-              onChange={handleLanguageChange}
-            >
-              {SUPPORTED_LANGUAGE.map((lan) => (
-                <option key={lan.identifier} value={lan.identifier}>
-                  {lan.langauge}</option>
-              )
-              )
-              }
-            </select>
+            {
+              showGptValue &&
+                <select className='p-2 m-2 bg-gray-900 text-white'
+                  onChange={handleLanguageChange}
+                >
+                  {
+                    SUPPORTED_LANGUAGE.map((lan) => (
+                      <option key={lan.identifier} value={lan.identifier}>
+                        {lan.langauge}</option>
+                    )
+                    )
+                  }
+                </select>
+                
+            }
 
             <button className='py-2 px-4 m-2 bg-purple-800 text-white rounded-lg'
               onClick={handleGptSearchClick}
